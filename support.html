@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="evala.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Evala Login</title>
+  <body>
+    <input id="supportSubject" type="text" placeholder="Subject">
+    <textarea id="supportDetails" type="textbox" placeholder="Details"></textarea>
+    <input class="supportButton" type="button" value="Close" onclick="closeWindow()">
+    <input class="supportButton" type="button" value="Send" onclick="send()">
+    <script>
+      function closeWindow () { window.close(); }
+      function send () {
+        alert("Request is sent successfully");
+        closeWindow();
+      }
+    </script>
+  </body>
+</html>

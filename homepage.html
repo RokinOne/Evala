@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="evala.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Evala Homepage</title>
+
+  <body onload="init()">
+    <header>
+      <img src="evala.png" alt="Logo" width="50" height="50">
+      <span id="title">Evala Sales Management Web Application</span>
+      <button onclick="logout()">LOGOUT</button>
+      <span id="user"></span>
+    </header>
+
+    <section id="charts">
+      <section id="pieChart">
+        <h3>Sales Total per Sales Man</h3>
+        <button class="refresh" onclick="openChart(1)">refresh</button>
+        <canvas id="myChart1" width="400" height="400"></canvas>
+      </section>
+
+
+      <section id="barChart">
+        <h3>Sales Total per month</h3>
+        <button class="refresh" onclick="openChart(2)">refresh</button>
+        <canvas id="myChart2" width="400" height="400"></canvas>
+      </section>
+
+      <section id="ordersChart">
+        <h3>Top 5 Sales Order</h3>
+        <button class="refresh" onclick="openChart(3)">refresh</button>
+        <canvas id="myChart3" width="400" height="400"></canvas>
+      </section>
+
+      <section id="menChart">
+        <h3>Top 5 Sales Men</h3>
+        <button class="refresh" onclick="openChart(4)">refresh</button>
+        <canvas id="myChart4" width="400" height="400"></canvas>
+      </section>
+    </section>
+
+    <footer>
+      <a href="#" onclick="openPopup('privacy')">Privacy Policy</a>|
+      <a href="#" onclick="openPopup('terms')">Terms of Use</a>|
+      <a href="#" onclick="openPopup('support')">Support</a>
+    </footer>
+
+    <script src="Chart.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
